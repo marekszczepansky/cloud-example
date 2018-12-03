@@ -24,8 +24,8 @@ import org.springframework.web.client.RestTemplate;
 public class OtherController
 {
 
-	private static final String SERVICE_A_URL = "http://localhost:9091";
-	private static final String SERVICE_B_URL = "http://localhost:9092";
+	private static final String SERVICE_A_URL = "http://service-a";
+	private static final String SERVICE_B_URL = "http://service-b";
 
 	@Autowired
 	private RestTemplate restTemplate;

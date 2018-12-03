@@ -1,2 +1,17 @@
 server:
   port: 9091
+spring:
+  application:
+    name: service-a
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    healthcheck:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -23,8 +23,8 @@ import org.springframework.web.client.RestTemplate;
 @SuppressWarnings({ "ALL" })
 public class OtherController
 {
-	private static final String SERVICE_B_URL = "http://localhost:9092";
-	private static final String SERVICE_C_URL = "http://localhost:9093";
+	private static final String SERVICE_B_URL = "http://service-b";
+	private static final String SERVICE_C_URL = "http://service-c";
 
 	@Autowired
 	private RestTemplate restTemplate;
