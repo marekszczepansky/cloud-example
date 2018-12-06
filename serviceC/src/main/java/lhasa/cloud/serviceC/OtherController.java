@@ -67,7 +67,7 @@ public class OtherController
 
 	private Element getElementForRequest(HttpServletRequest request)
 	{
-		logger.info("--== called {} ==--", request.getRequestURI());
+		logger.info("\n\n--== called {} ==--\n\n", request.getRequestURI());
 		return new Element(String.format("%s called", request.getRequestURI()), request.getLocalPort());
 	}
 }

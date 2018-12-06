@@ -18,7 +18,7 @@ public class MainController
 	@GetMapping("/getC")
 	public List<Element> getC(HttpServletRequest request)
 	{
-		logger.info("--== called {} ==--", request.getRequestURI());
+		logger.info("\n\n--== called {} ==--\n\n", request.getRequestURI());
 		return Collections.singletonList(new Element(request.getRequestURI() + " called", request.getLocalPort()));
 	}
 
