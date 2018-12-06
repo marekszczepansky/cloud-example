@@ -1,5 +1,5 @@
 package lhasa.cloud.serviceA;
-
+@SuppressWarnings("ALL")
 public class Element {
     private String sourceService = "Service A";
     private int sourcePort;
