@@ -8,6 +8,7 @@ spring:
     name: service-a
   zipkin:
     base-url: http://localhost:9411/
+#optional eureka configuration
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
@@ -15,6 +16,7 @@ eureka:
   client:
     healthcheck:
       enabled: true
+#actuator configuration
 management:
   endpoints:
     web:
