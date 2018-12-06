@@ -14,6 +14,19 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: route1
+          uri: lb://service-a
+          predicates:
+            - Path=/getA*
+        - id: route2
+          uri: lb://service-b
+          predicates:
+            - Path=/getB*
+        - id: route3
+          uri: lb://service-c
+          predicates:
+            - Path=/getC*
 eureka:
   client:
     register-with-eureka: false
