@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    base-url: http://localhost:9411/
+  application:
+    name: gateway
+  cloud:
+    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+      routes:
+        - id: route1
+          uri: lb://service-a
+          predicates:
+            - Path=/getA*
+        - id: route2
+          uri: lb://service-b
+          predicates:
+            - Path=/getB*
+        - id: route3
+          uri: lb://service-c
+          predicates:
+            - Path=/getC*
+eureka:
+  client:
+    register-with-eureka: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

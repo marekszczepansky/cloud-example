@@ -1,2 +1,24 @@
 server:
   port: 9093
+spring:
+  sleuth:
+    sampler:
+      probability: 1
+  application:
+    name: service-c
+  zipkin:
+    base-url: http://localhost:9411/
+#optional eureka configuration
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    healthcheck:
+      enabled: true
+#actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

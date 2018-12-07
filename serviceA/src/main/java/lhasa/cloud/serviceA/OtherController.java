@@ -10,6 +10,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +25,9 @@ import org.springframework.web.client.RestTemplate;
 @SuppressWarnings({ "ALL" })
 public class OtherController
 {
-	private static final String SERVICE_B_URL = "http://localhost:9092";
-	private static final String SERVICE_C_URL = "http://localhost:9093";
+	private static final String SERVICE_B_URL = "http://service-b";
+	private static final String SERVICE_C_URL = "http://service-c";
+	private static final Logger logger = LoggerFactory.getLogger(OtherController.class);
 
 	@Autowired
 	private RestTemplate restTemplate;
@@ -63,6 +66,7 @@ public class OtherController
 
 	private Element getElementForRequest(HttpServletRequest request)
 	{
+		logger.info("\n\n--== called {} ==--\n\n", request.getRequestURI());
 		return new Element(String.format("%s called", request.getRequestURI()), request.getLocalPort());
 	}
 }

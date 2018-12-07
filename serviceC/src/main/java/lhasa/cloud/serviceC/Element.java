@@ -1,5 +1,5 @@
 package lhasa.cloud.serviceC;
-
+@SuppressWarnings("ALL")
 public class Element {
     private String sourceService = "Service C";
     private int sourcePort;
