@@ -53,3 +53,4 @@ Zipkin Client, Actuator, DevTools
 
 API Gateway configuration possibilities: https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html
 
+Short cheat sheet: https://marekszczepansky.github.io/Spring-5/2018/07/29/microservices.html
