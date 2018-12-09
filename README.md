@@ -24,6 +24,9 @@ Running order is significant
   http://localhost:8080/getCB, http://localhost:8080/getCAB, http://localhost:8080/getCBA
 - service registry http://localhost:8761/
 - zipkin http://localhost:9411/
+- actuator health check http://localhost:8080/actuator, http://localhost:9091/actuator, 
+http://localhost:9092/actuator, http://localhost:9093/actuator, 
+http://localhost:8761/actuator, http://localhost:9411/actuator, 
 
 ## Setup
 
@@ -51,6 +54,7 @@ Zipkin Client, Actuator, DevTools
 
 ## More info
 
-API Gateway configuration possibilities: https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html
-
-Short cheat sheet: https://marekszczepansky.github.io/Spring-5/2018/07/29/microservices.html
+- API Gateway configuration possibilities: https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html
+- Service registry client configuration https://cloud.spring.io/spring-cloud-netflix/multi/multi__service_discovery_eureka_clients.html
+- Service registry server configuration https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-eureka-server.html
+- Short cheat sheet: https://marekszczepansky.github.io/Spring-5/2018/07/29/microservices.html
