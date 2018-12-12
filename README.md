@@ -7,10 +7,10 @@ Running order is significant
 - run zipkin by `java -jar zipkin-server-2.11.9-exec.jar`
 - run serviceA, serviceB, serviceC projects
 - run additional service copies (local balancing test) with
-  - `java -jar -Dserver.port=11001 serviceA.jar` (you can build own binary with `mvn clean install`)
-  - `java -jar -Dserver.port=12001 serviceB.jar` (you can build own binary with `mvn clean install`)
-  - `java -jar -Dserver.port=12002 serviceB.jar` (you can build own binary with `mvn clean install`)
-  - `java -jar -Dserver.port=13001 serviceC.jar` (you can build own binary with `mvn clean install`)
+  - `java -jar -Dserver.port=11001 serviceA.jar` (you can run from sources by `mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=11001"`)
+  - `java -jar -Dserver.port=12001 serviceB.jar` (you can run from sources by `mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=12001"`)
+  - `java -jar -Dserver.port=12002 serviceB.jar` (you can run from sources by `mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=12002"`)
+  - `java -jar -Dserver.port=13001 serviceC.jar` (you can run from sources by `mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.port=13001"`)
   
 
 ## Demo & test
