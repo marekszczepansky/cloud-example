@@ -3,7 +3,7 @@
 ## Running
 Running order is significant
 
-- run service registry project
+- run service registry project (eureka-server)
 - run zipkin by `java -jar zipkin-server-2.11.9-exec.jar`
 - run serviceA, serviceB, serviceC projects
 - run additional service copies (local balancing test) with
