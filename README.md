@@ -1,4 +1,4 @@
-# Cloud Example
+# Spring Cloud Example
 
 ## Running
 Running order is significant
